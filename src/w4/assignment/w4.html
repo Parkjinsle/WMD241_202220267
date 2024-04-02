@@ -41,6 +41,27 @@
         background-color: #dcccad;
         padding: 1rem;
       }
+
+      table tr td:nth-child(1),
+      table tr td:nth-child(2),
+      table tr td:nth-child(3) {
+        padding: 0px 8px;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border-bottom: 2px solid #b1ada8;
+        padding: 0px 8px;
+      }
+
+      tr:not(:nth-child(1)) td {
+        border-top: none;
+        border-bottom: none;
+      }
     </style>
   </head>
   <body>
@@ -220,8 +241,6 @@
           font-weight: 400;
           font-size: 18px;
           line-height: 27px;
-          border-top-style: solid;
-          border-top-color: #b1ada8;
         "
       >
         <tr style="width: 32px; height: 29px">
@@ -272,6 +291,7 @@
           <td>스파게티 혹은 부카티니 혹은 리가토니</td>
         </tr>
       </table>
+
       <p
         style="
           font-weight: 700;
