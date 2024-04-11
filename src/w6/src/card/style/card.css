@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+/* 와이파이 꺼지면 안 보임 (웹폰트 가져오기) 추천하는 방법x */
+
+body {
+  font-family: "Cute Font", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.card.card--color-blue {
+  background-color: oklch(98% 0.025 200);
+}
+
+.card {
+  max-width: 25rem;
+  background-color: oklch(98% 0.025 90);
+  overflow-x: hidden;
+  /* 이미지가 넘칠 때 */
+  /* padding: 1rem; */
+  /* margin 보다는 padding을 사용하는 것이 좋음 */
+  border-radius: 0.75rem;
+  /* 테두리 둥글게 */
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 3rem;
+}
+
+.card:first-child {
+  margin-top: 0rem;
+}
+
+.card__img {
+  width: 100%;
+  /* 이미지가 더 작을 때 키우기*/
+}
+
+.card__top {
+  padding-inline: 1rem;
+  padding-block: 0.75rem;
+}
+
+.card__bottom {
+  padding: 1rem;
+}
+
+.card__p {
+  margin-top: 2rem;
+}
+
+.card__title {
+  font-weight: 500;
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+
+.card__subtitle {
+  line-height: 1.25rem;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.card__bottom .card__title {
+  font-weight: 400;
+}
+/* 위아래 같은 이름에 다른 스타일 적용하는 법 */
+
+/* .card__bottom > .card__title {
+  font-weight: 400;
+} */
+/* 이 방법도 가능한데 잘 사용하진 않음 */
+
+.card__bottom .card__subtitle {
+  margin-top: 0rem;
+}

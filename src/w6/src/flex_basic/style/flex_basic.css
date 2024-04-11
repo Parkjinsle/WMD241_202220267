@@ -1,0 +1,28 @@
+/* 웹사이트 만들 때 베이직 */
+
+* {
+  box-sizing: border-box;
+}
+
+.section {
+  background-color: aquamarine;
+  padding: 1rem;
+  border: 1px solid #000;
+}
+
+.container {
+  background-color: bisque;
+  max-width: 50rem;
+  margin-inline: auto;
+  padding: 1rem;
+}
+
+.children {
+  border: 1px solid #f00;
+  padding: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+/* 자기가 차지할 수 있는 공간만 차지함 */
