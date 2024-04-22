@@ -5,6 +5,10 @@
 body {
   margin: 0;
   background-color: #eafaf1;
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
 }
 
 .container {
@@ -12,16 +16,28 @@ body {
   margin-inline: auto;
 }
 
+.navigation__menu-group-right-black {
+  color: black;
+}
+
+.navigation__menu-group-right-sign {
+  height: 35.2px;
+  border: 2px solid #00ad6a;
+  padding-inline: 16px;
+  padding-block: 4px;
+}
+
 .navigation {
-  background-color: aqua;
   display: flex;
   justify-content: space-between;
   padding-inline: 24px;
   padding-block: 48px;
+  
 }
 
 .navigation > .navigation__menu-group {
   display: flex;
+  font-weight: 700;
   gap: 40px;
   padding-left: 0px;
   margin-block: 0px;
@@ -31,7 +47,7 @@ body {
 }
 
 .navigation__menu-group-left {
-  background-color: burlywood;
+  background-color:  #00ad6a;
   width: 119px;
   height: 49px;
 }
@@ -43,20 +59,20 @@ body {
 }
 
 .section__maintitle {
+  font-weight: 900;
   text-align: center;
   font-size: 60px;
   margin-block: 0;
-  font-weight: 700;
+  letter-spacing: -3px;
 }
 
 .section__subtitle {
+  text-align: center;
   margin-top: 16px;
   font-size: 18px;
-  text-align: center;
 }
 
 .section__box {
-  background-color: chocolate;
   margin-inline: -16px;
   width: 1163px;
   display: flex;
@@ -75,6 +91,11 @@ body {
   margin-bottom: 16px;
 }
 
+.section__box-right {
+  margin-left: -36px;
+  height: 620px;
+}
+
 .section__box-right-top {
   padding-inline: 32px;
   padding-top: 20px;
@@ -85,6 +106,7 @@ body {
 }
 
 .section__box-right-bottom {
+  color: #464951;
   text-align: left;
   list-style: none;
 }
@@ -105,10 +127,21 @@ body {
   padding-inline: 20px;
 }
 
+
 .section__box-right {
+  margin-top: 60px;
   text-align: center;
   background-color: #f2f3f3;
-  border: 1px solid rgb(131, 133, 138);
+  border-bottom: 1px solid rgb(131, 133, 138);
+  border-top: 1px solid rgb(131, 133, 138);
+  border-right: 1px solid rgb(131, 133, 138);
+  border-left: 1px solid #00ad6a;
+}
+
+.section__box-center {
+  background-color: #f2f3f3;
+  height: 670px;
+  border: 1px solid #00ad6a;
 }
 
 .section__box-right-center-1 {
@@ -132,13 +165,13 @@ body {
   padding-top: 8px;
   padding-bottom: 12px;
   margin-bottom: 32px;
-  margin-left: 81px;
+  margin-left: 90px;
   font-size: 20px;
-  font-weight: 700;
-  width: 180px;
-  height: 40px;
+  font-weight: 900;
+  width: 190px;
+  height: 50px;
   text-align: center;
-  background-color: #00ad6a;
+  background-color: #1fe374;
   color: rgb(70, 73, 81);
 }
 
@@ -146,4 +179,86 @@ body {
   color: rgb(70, 73, 81);
   font-size: 12px;
   font-weight: 700;
+}
+
+.section__box-center-top {
+  width: 386.125px;
+  text-align: center;
+  padding-block: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background-color: #00ad6a;
+  color: #eafaf1;
+}
+
+.section__box-center-center-1 {
+  width: 386.125px;
+  text-align: center;
+  line-height: 103%;
+  margin-top: 38px;
+  font-size: 48px;
+  font-weight: 700;
+  color: #00ad6a;
+  padding-inline: 16px;
+}
+
+.section__box-center-center-2 {
+  width: 386.125px;
+  text-align: center;
+  color: rgb(131, 133, 138);
+  margin-top: 8px;
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+}
+
+.section__box-center-center-3 {
+  width: 190px;
+  height: 50px;
+  text-align: center;
+  color: rgb(70, 73, 81);
+  font-size: 20px;
+  font-weight: 900;
+  background-color: #1fe374;
+  padding-top: 8px;
+  margin-left: 100px;
+  margin-bottom: 32px;
+}
+
+.section__box-center-center-4 {
+  text-align: center;
+  color: rgb(70, 73, 81);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.section__box-center-bottom-1 {
+  width: 330.112px;
+  height: 59.2px;
+  padding-block: 8px;
+  padding-inline: 20px;
+}
+
+.section__box-center-bottom-2 {
+  width: 330.112px;
+  height: 88px;
+  padding-block: 8px;
+  padding-inline: 20px;
+}
+
+.section__box-center-bottom-3 {
+  width: 330.112px;
+  height: 59.2px;
+  padding-block: 8px;
+  padding-inline: 20px;
+}
+
+.section__box-center-bottom-4 {
+  width: 330.112px;
+  height: 59.2px;
+  padding-top: 8px;
+  margin-bottom: 50px;
+  padding-inline: 20px;
 }
