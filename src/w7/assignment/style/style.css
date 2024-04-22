@@ -82,6 +82,7 @@ body {
 
 .section__box-left {
   padding-inline: 24px;
+  margin-top: 120px;
 }
 
 .section__box-left-subtitle {
@@ -89,6 +90,15 @@ body {
   font-weight: 700;
   color: rgb(0, 173, 106);
   margin-bottom: 16px;
+}
+
+.section__box-left-bottom {
+  width: ;
+  font-weight: 300;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 .section__box-right {
@@ -100,8 +110,8 @@ body {
   padding-inline: 32px;
   padding-top: 20px;
   padding-bottom: 24px;
-  background-color: rgb(214, 218, 229);
-  border-bottom: 1px solid rgb(131, 133, 138);
+  background-color: #f2f3f3;
+  border-bottom: 1px solid #abadb4;
   color: rgb(70, 73, 81);
 }
 
@@ -129,19 +139,23 @@ body {
 
 
 .section__box-right {
-  margin-top: 60px;
+  margin-top: 50px;
+  height: 600px;
+  margin-bottom: 40px;
   text-align: center;
-  background-color: #f2f3f3;
-  border-bottom: 1px solid rgb(131, 133, 138);
-  border-top: 1px solid rgb(131, 133, 138);
-  border-right: 1px solid rgb(131, 133, 138);
+  background-color: #fcfcfc;
+  border-bottom: 1px solid  #abadb4;
+  border-top: 1px solid #abadb4;
+  border-right: 1px solid #abadb4;
   border-left: 1px solid #00ad6a;
 }
 
 .section__box-center {
-  background-color: #f2f3f3;
-  height: 670px;
+  background-color: #fcfcfc;
+  height: 700px;
   border: 1px solid #00ad6a;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
 .section__box-right-center-1 {
@@ -190,6 +204,8 @@ body {
   letter-spacing: 1px;
   background-color: #00ad6a;
   color: #eafaf1;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
 .section__box-center-center-1 {
@@ -235,6 +251,7 @@ body {
 }
 
 .section__box-center-bottom-1 {
+  font-weight: 300;
   width: 330.112px;
   height: 59.2px;
   padding-block: 8px;
@@ -242,6 +259,7 @@ body {
 }
 
 .section__box-center-bottom-2 {
+  font-weight: 300;
   width: 330.112px;
   height: 88px;
   padding-block: 8px;
@@ -249,6 +267,7 @@ body {
 }
 
 .section__box-center-bottom-3 {
+  font-weight: 300;
   width: 330.112px;
   height: 59.2px;
   padding-block: 8px;
@@ -256,6 +275,7 @@ body {
 }
 
 .section__box-center-bottom-4 {
+  font-weight: 300;
   width: 330.112px;
   height: 59.2px;
   padding-top: 8px;
