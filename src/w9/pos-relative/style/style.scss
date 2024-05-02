@@ -17,6 +17,8 @@ body {
   line-height: 150%;
   color: oklch(0.3 0 0);
   background-color: oklch(0.9 0 0);
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 p {
@@ -79,6 +81,7 @@ img {
     // &:nth-child(1) {
     //   z-index: 1;
     // }
+    // 하나하나 다 입력하기 어려움으로 밑에 방법 적용하기
     @for $i from 1 through 5 {
       &:nth-child(#($i)) {
         z-index: #($i);
@@ -129,6 +132,24 @@ img {
     -webkit-line-clamp: 3;
     // 글이 넘칠 경우 숫자에 따라 몇 줄 까지 보여줄지 정함
     -webkit-box-orient: vertical;
+  }
+  &--type-new {
+    &::after {
+      position: absolute;
+      top: -0.75rem;
+      right: -0.75rem;
+      content: 'N';
+      width: 1lh;
+      aspect-ratio: 1 / 1;
+      font-size: .875rem;
+      display: block;
+      font-weight: 600;
+      text-align: center;
+      color: #fff;
+      background-color: #ff0000;
+      border-radius: 624.9375rem;
+      padding: var(--badge-p-x);
+    }
   }
 
 }
