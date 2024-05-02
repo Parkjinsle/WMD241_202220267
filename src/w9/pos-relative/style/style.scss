@@ -22,6 +22,7 @@ body {
 
 p {
   margin-block: 0;
+  // p태그는 자동으로 마진이 생겨서 0으로
 }
 
 img {
@@ -29,7 +30,9 @@ img {
 }
 
 .section {
-  > h2 {
+  > h2 
+  // section 안에 있는 h2에만 적용
+  {
     text-align: center;
   }
 }
@@ -89,6 +92,7 @@ img {
     // &:nth-child(5) {
     //   z-index: 5;
     // }
+    // 하나하나 다 입력하기 번거로움으로 밑에 방법 적용하기
     @for $i from 1 through 100 {
       &:nth-child(#{$i}) {
         z-index: #{$i};
@@ -97,15 +101,21 @@ img {
   }
   &:nth-child(1) {
     margin-top: 0;
+    // 5개의 카드 중 1번째 카드만 마진 0
   }
   &__top {
     padding-block: var(--card-m-y);
     padding-inline: var(--card-m-x);
+    // (--card-m-y) 라는 메모를 남겨주면 이 메모가 적혀있는 곳이 한 번에 같이 바뀜
+    // 이름 앞에 --는 무조건 써주기
+    // (--card-m-y): card, margin, y축 이라는 뜻
   }
   &__middle {
     width: 100%;
     aspect-ratio: 1 / 1;
+    // 부모의 크기보다 커지지 않으면서 자동으로 비율 조절
     object-fit: cover;
+    // 이미지를 알아서 크롭하여 넣어줌
   }
   &__bottom {
     padding-block: var(--card-m-y);
@@ -127,7 +137,9 @@ img {
   &__desc {
     display: -webkit-box;
     overflow: hidden;
+    // 글이 설정한 박스 사이즈보다 넘치면 넘친 글을 숨겨줌
     -webkit-line-clamp: 3;
+    // 글이 넘칠 경우 몇 줄 까지 보여줄지 정함 (숫자는 줄 갯수)
     -webkit-box-orient: vertical;
   }
   &--type-new {
