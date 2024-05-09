@@ -1,0 +1,86 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+// after, before에 보더박스가 적용되지 않는 경우도 있어서 같이 적용해주는 게 좋음
+
+body {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 150%;
+}
+
+.section {
+  padding-block: 1.5rem;
+}
+
+.section > h2 {
+  max-width: 60rem;
+  margin-inline: auto;
+  margin-block: 0;
+  padding-inline: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.container {
+  max-width: 60rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  background-color: oklch(0.95 0.01 240);
+}
+
+.grid {
+  display: grid;
+
+  &__item {
+    &--nth {
+      @for $i from 1 through 12 {
+        &-#{$i} {
+          background-color: oklch(0.9 0.05 $i * 30);
+        }
+      }
+    }
+  }
+
+  &--opt-1 {
+    grid-template-columns: 1fr 1fr 1fr;
+    // 가로 몇 컬럼으로 놓고 싶은지, 가로 사이즈 설정 - fr은 그리드에서 사용할 수 있음 (px은 공간이 남음)
+    // 1fr 1fr 1fr: 사이즈는 유동적으로 변할 수 있는데 비율은 1:1:1 비율로 바뀌게 설정 - 창 사이즈에 상관없이 비율 유지됨
+
+    // grid-template-rows: 1fr 1fr 1fr 1fr;
+    // 세로 - 설정 안 해주면 세로 사이즈가 자녀 사이즈에 따라 다 다름
+
+    grid-auto-rows: 1fr;
+    // auto-rows: 앞으로 새로 생기는 모든 그리드는 1fr로 생김 - 가장 큰 그리드에 맞춰서 비율이 설정됨
+    // template-rows는 각자 다른 값을 넣을 수 있음
+
+    grid-template-rows: 4fr;
+    // 첫 번째 줄에만 적용됨 (나머지는 auto-rows)
+
+    column-gap: 0.75rem;
+    row-gap: 1.4375rem;
+  }
+
+  &--opt-2 {
+    // grid-template-columns: repeat(3, 1fr);
+    // 함수 - (몇 행 , 얼마나)
+
+    // grid-template-columns: 200px, repeat(2, 1fr);
+
+    // grid-template-columns: minmax(100px, 200px);
+    // (최소값, 최대값) - 기본은 가로 한 칸만 만들어짐
+
+    // grid-template-columns: repeat(3, minmax(100px, 1fr));
+    // 함수 두 개 사용, 가로 3칸 - 너무 좁아지면 부모님 영역을 벗어남
+
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    // 자동으로 줄바꿈을 해줌 - 이걸 가장 많이 사용함
+
+    grid-auto-rows: 1fr;
+    // rows에는 함수 말고 fr만 넣어주는 게 좋음
+
+    column-gap: 0.75rem;
+    row-gap: 1.4375rem;
+  }
+}
