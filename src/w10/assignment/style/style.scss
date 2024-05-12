@@ -175,6 +175,23 @@ body {
     font-size: 1.5rem;
     font-weight: 900;
   }
+
+  &__author {
+    position: relative;
+  }
+
+  &__author-img {
+    max-width: 16.3125rem;
+  }
+
+  &__author-title {
+    position: absolute;
+    color: rgb(16, 40, 75);
+    font-size: 1.5rem;
+    font-weight: 900;
+    top: 40px;
+    left: 35px;
+  }
 }
 
 .title {
