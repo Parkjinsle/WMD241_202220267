@@ -218,3 +218,10 @@ body {
   font-weight: 400;
   margin-block: 0rem;
 }
+.footer__text-collection_text_color {
+  color: rgb(16, 40, 75);
+}
+.footer__text-collection_img {
+  max-width: 2rem;
+  display: grid;
+}

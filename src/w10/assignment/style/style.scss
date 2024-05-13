@@ -231,5 +231,14 @@ body {
       font-weight: 400;
       margin-block: 0rem;
     }
+
+    &_text_color {
+      color: rgb(16, 40, 75);
+    }
+
+    &_img {
+      max-width: 2rem;
+      display: grid;
+    }
   }
 }
