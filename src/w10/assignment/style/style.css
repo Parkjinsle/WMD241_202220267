@@ -60,10 +60,6 @@ body {
   font-size: 16px;
   font-weight: 600;
 }
-.sidebar_top_middle-1 {
-  background-color: aqua;
-  color: rgb(56, 31, 209);
-}
 .sidebar_bottom {
   background-color: rgb(243, 242, 252);
   border-radius: 8px;
@@ -91,6 +87,10 @@ body {
 }
 .sidebar_img {
   max-width: 13.75rem;
+}
+
+.sidebar_middle-1 {
+  color: rgb(56, 31, 209);
 }
 
 .sidebar_middle > div {
