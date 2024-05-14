@@ -248,6 +248,7 @@ body {
         font-size: 1rem;
         font-weight: 700;
         letter-spacing: 0.0938rem;
+        place-items: center end;
       }
     }
 
@@ -257,6 +258,7 @@ body {
       justify-content: space-between;
       padding-inline: 6rem;
       padding-bottom: 6rem;
+      place-items: center start;
     }
   }
 }
