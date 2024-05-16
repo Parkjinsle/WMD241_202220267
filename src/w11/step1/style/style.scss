@@ -1,0 +1,95 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 150%;
+}
+
+.btn {
+  cursor: pointer;
+  // 버튼 위에 커서를 가져갔을 때 커서를 포인터로 변경
+  max-width: fit-content;
+  padding-inline: 1rem;
+  padding-block: 0.5rem 0.375rem;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  background-color: oklch(0.4 0.1 150);
+  color: oklch(0.9 0.1 150);
+  text-transform: capitalize;
+  border-radius: 64rem;
+  margin-top: 1.25rem;
+  transition: all 300ms ease-out;
+
+  &:hover {
+    // hover: 내가 어떤 것 위에 마우스가 떠있는 상황
+
+    // transition: all 300ms ease-out;
+    //  hover안에 트렌지션을 넣으면 커서를 뗄 때는 적용되지 않음, 작은 버튼에서 ms는 250~300 (0.25초~0.3초) 정도가 적당함
+    background-color: oklch(0.4 0.1 240);
+    color: oklch(0.9 0.1 240);
+  }
+
+  &--type {
+    &-elevated {
+      background-color: oklch(0.95 0.025 150);
+      color: oklch(0.45 0.1 150);
+      box-shadow: 0rem 0.25rem 0.25rem 0rem rgba(0, 0, 0, 0.25);
+      &:hover {
+        background-color: oklch(0.95 0.025 240);
+        color: oklch(0.45 0.1 240);
+        box-shadow: 0rem 0.125rem 0.125rem 0rem rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    &-tonal {
+      background-color: oklch(0.8 0.05 150);
+      color: oklch(0.3 0.1 150);
+    }
+
+    &-outline {
+      color: oklch(0.4 0.1 150);
+      background-color: unset;
+      border: 0.0625rem solid oklch(0.5 0 150);
+    }
+
+    &-text {
+      padding-inline: 0.75rem;
+      color: oklch(0.4 0.1 150);
+      background-color: unset;
+
+      &:hover {
+        background-color: unset;
+        color: oklch(1 0 150);
+        animation-name: rainbow;
+        animation-duration: 500ms;
+        animation-iteration-count: 4;
+        // 몇 번 반복할지
+      }
+    }
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    background-color: oklch(0.5 0.2 0);
+    transform: translate(0rem, 0rem);
+  }
+  25% {
+    transform: translate(1rem, 0rem);
+  }
+  50% {
+    transform: translate(1rem, 1rem);
+  }
+  75% {
+    transform: translate(0rem, 1rem);
+  }
+  100% {
+    background-color: oklch(0.5 0.2 360);
+    transform: translate(0rem, 0rem);
+  }
+}
