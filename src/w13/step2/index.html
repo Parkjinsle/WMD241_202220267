@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lottie Embeding</title>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script>
+      LottieInteractivity.create({
+        player: '#lottie-2',
+        mode: 'cursor',
+        actions: [
+          {
+            type: 'click',
+            forceFlag: false,
+          },
+        ],
+      });
+    </script>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <div class="section">
+      <div class="container">
+        <h1>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos,
+          impedit?
+        </h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus
+          quae dolore vitae animi, inventore nemo magnam at veniam eos. Eaque
+          quaerat soluta non, nesciunt culpa sit quisquam nisi magnam. Beatae
+          aliquid odio cumque labore rerum ab laborum aliquam nesciunt dolores
+          voluptatibus, quisquam minima dolore soluta asperiores inventore.
+          Accusamus, sint necessitatibus.
+        </p>
+        <dotlottie-player
+          id="lottie-1"
+          class="lottie"
+          src="./assets/lottie-downloded.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay
+        ></dotlottie-player>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
+          repellat omnis veritatis accusantium aliquam debitis mollitia atque
+          suscipit ipsum itaque.
+        </p>
+        <lottie-player
+          id="lottie-2"
+          class="lottie"
+          src="https://lottie.host/01a29fc3-00be-4adf-951c-06a9813f0903/sWWFnUpf1t.json"
+          background="transparent"
+          speed="1"
+        ></lottie-player>
+      </div>
+    </div>
+  </body>
+</html>
